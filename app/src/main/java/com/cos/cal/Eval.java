@@ -20,6 +20,7 @@ public class Eval {
             return engine.eval(result).toString();
         } catch (Exception e) {
             e.printStackTrace();
+            // 이상한 기호 들어오면 에러 -> 유효성 검사로 원래는 막아줘야해
         }
         return null;
     }
