@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.cos.cal.databinding.ActivityMainBinding;
+
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity2";
@@ -32,16 +34,21 @@ public class MainActivity extends AppCompatActivity {
 
     private String inputData = "";
 
+    //private ActivityMainBinding binding;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Log.d(TAG, "onCreate: start");
         super.onCreate(savedInstanceState);
+        //binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(R.layout.activity_main);
+        //setContentView(binding.getRoot());
 
         init();
         initListener();
     }
+
 
     private void initListener(){
         // 목적 : 숫자 누르면 화면(tpInput)에 띄워야됨
